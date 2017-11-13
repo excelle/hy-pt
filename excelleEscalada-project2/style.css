@@ -69,7 +69,7 @@ img {
 }
 
 .detailSpace {
-	margin: 50px 0 0 0;
+	margin: 50px 0;
 }
 
 h1 {
@@ -279,6 +279,11 @@ h2, .exec {
 	margin: 0;	
 }
 
+.galleryNavP:hover {
+	color: #d24e0d;
+}
+/*mouse pointer?*/
+
 .galleryNavs li {
 	border-left: 1px solid white;
 }
@@ -288,15 +293,45 @@ h2, .exec {
 }
 
 .theGallery {
+	width: 100%;
 	margin: 60px 0 0 0;
+	flex-wrap: wrap;
 	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
 figure {
-	/*width: 20%;*/
+	width: 260px;
 	margin: 0;
 	padding: 0;
 	font-size: 1px;
+	position: relative;
+}
+
+figure:hover figcaption {
+	color: white;
+	/*font-size: 30px;*/
+	text-align: center;
+	/*padding-top: 20%;*/
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+figure:hover .fig1 {
+	font-size: 22px;
+	padding-top: 20%;
+}
+
+figure:hover .fig2 {
+	font-size: 11px;
+	text-transform: uppercase;
+	padding-top: 30%;
 }
 
 .ourServices {
@@ -310,7 +345,13 @@ figure {
 	width: 70%;
 	align-items: center;
 	justify-content: space-around;
+	margin: 40px 0;
+}
 
+.servicesDesc {
+	width: 50%;
+	text-align: center;
+	margin: 30px 0;
 }
 
 .services {
@@ -325,7 +366,6 @@ figure {
 	width: 50%;
 	flex-direction: column;
 	align-items: center;
-	border: 1px red solid;
 	margin: 0;
 }
 
@@ -359,7 +399,20 @@ figure {
 	flex-direction: column;
 	align-items: center;
 	background: #24292d;
-	
+}
+
+.googleMaps {
+	position: relative;
+}
+
+.mapMarker {
+	position: absolute;
+	top: 10%;
+	left: 51%;
+/*	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;*/
 }
 
 .footerDetails {
@@ -392,6 +445,7 @@ figure {
 }
 
 .social,
+.social a,
 .iconLeft,
 .footerContact,
 footer {
@@ -412,6 +466,7 @@ footer {
 
 .rFooter {
 	flex-direction: column;
+	padding-left: 20px;
 }
 
 .contactItem {
@@ -487,6 +542,8 @@ footer {
 	margin: 25px 0;
 	text-transform: uppercase;
 	padding: 15px 30px;
+	background: white;
+	border: solid 2px black;
 }
 
 footer {
